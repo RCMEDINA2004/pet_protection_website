@@ -12,10 +12,10 @@ const Navbar = () => {
   }, []);
 
   const links = [
-    { label: 'Beneficios', href: '#beneficios' },
+    { label: 'Quienes Somos', href: '#quienes-somos' },
     { label: 'Cómo Funciona', href: '#como-funciona' },
     { label: 'Planes', href: '#planes' },
-    { label: 'Equipo', href: '#equipo' },
+    { label: 'Equipo De Trabajo', href: '#equipo' },
   ];
 
   return (

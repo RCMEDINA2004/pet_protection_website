@@ -116,10 +116,7 @@ const Hero = () => {
       <div className="container hero__container">
         {/* Left Content */}
         <div className="hero__content">
-          <div className="badge badge-teal" style={{marginBottom:'24px', animationDelay:'0.1s'}}>
-            <span className="material-symbols-outlined icon-filled" style={{fontSize:'14px'}}>verified</span>
-            Armenia, Quindío · Colombia
-          </div>
+          {/* badge removed per request */}
 
           <h1 ref={titleRef} className="text-display hero__title">
             Protegemos a quienes te acompañan{' '}
@@ -128,7 +125,7 @@ const Hero = () => {
 
           <p className="text-body-lg hero__subtitle">
             Planes de protección médica para mascotas con cobertura en toda Armenia, Quindío. 
-            Conectamos tu familia con veterinarias aliadas a través de tecnología de vanguardia.
+            Conectamos tu familia con veterinarias aliadas a través de tecnología de calidad.
           </p>
 
           <div className="hero__cta-group">

@@ -14,8 +14,8 @@
   /* Extended Palette */
   --color-navy-light:    #0D3260;
   --color-blue-dark:     #0050CC;
-  --color-blue-glow:     rgba(0, 102, 255, 0.25);
-  --color-teal-glow:     rgba(0, 198, 184, 0.25);
+  --color-blue-glow:     rgba(0,102,255,0.25);
+  --color-teal-glow:     rgba(0,198,184,0.25);
   --color-teal-light:    #00E5D8;
 
   /* Surface Colors */

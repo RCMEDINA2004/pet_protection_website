@@ -9,7 +9,14 @@
   position: relative;
   overflow: hidden;
   padding: 120px 0 80px;
-  background: linear-gradient(135deg, #060E1A 0%, #0A1628 50%, #060E1A 100%);
+  /* Base slate blue-gray background and hero image (no overlay gradient) */
+  background-color: #556E77; /* RGB(85,110,119) */
+  background-image: url("../assets/P.png");
+  /* Right-side hero image (P.png) covering half the area */
+  background-repeat: no-repeat;
+  background-position: right center;
+  /* Let image scale responsively while keeping aspect ratio; final reduced size */
+  background-size: auto 50%;
 }
 
 /* Background */
@@ -29,11 +36,11 @@
 
 /* Responsive tweaks */
 @media (max-width: 1400px) {
-  .hero { background-size: 45% auto; }
+  .hero { background-size: auto 45%; }
 }
 
 @media (max-width: 1100px) {
-  .hero { background-position: right center; background-size: 45% auto; }
+  .hero { background-position: right center; background-size: auto 40%; }
   .hero__container { padding-right: 4vw; }
 }
 
@@ -48,6 +55,11 @@
   .hero__container { grid-template-columns: 1fr; padding-right: 0; padding-left: 4vw; padding-top: 40px; }
   .hero__subtitle { max-width: 640px; margin: 0 auto 24px; }
   .hero__trust { justify-content: center; }
+}
+
+/* Ensure the right column doesn't collapse when the image is hidden on small screens */
+@media (max-width: 900px) {
+  .hero__container { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 500px) {
@@ -104,11 +116,20 @@
 /* Container */
 .hero__container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(360px, 1fr) minmax(240px, 360px);
   gap: 64px;
   align-items: center;
   position: relative;
   z-index: 1;
+}
+
+/* Hide the app mockup and related decorative phone elements */
+.hero__mockup,
+.hero__mockup-wrapper,
+.hero__phone,
+.hero__phone-notch,
+.hero__phone-screen {
+  display: none !important;
 }
 
 /* Content Left */
@@ -121,7 +142,11 @@
 .hero__title {
   color: #fff;
   margin-bottom: 24px;
-  line-height: 1.05;
+  line-height: 1.02;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 66px;
+  letter-spacing: -0.02em;
 }
 
 .hero__subtitle {
@@ -129,6 +154,40 @@
   margin-bottom: 40px;
   max-width: 520px;
 }
+
+/* Gradient-highlighted word style (use by wrapping the word in a span.highlight) */
+.hero__title .highlight {
+  background: linear-gradient(90deg,#007BFF,#00C6B8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Darken left content against the bright image on the right */
+.hero::before{
+  content: "";
+  position: absolute;
+  inset: 0 50% 0 0; /* cover left half */
+  background: linear-gradient(90deg, rgba(6,14,26,0.95) 0%, rgba(6,14,26,0.55) 60%, rgba(6,14,26,0) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Soft blurred gradient where the image meets the background on the right */
+/* Removed the right-side blurred opaque rectangle to reveal the hero image fully */
+.hero::after{ display: none; }
+
+@media (max-width: 1100px) {
+  .hero::after { width: 40%; transform: translateX(6%); filter: blur(14px); }
+}
+
+@media (max-width: 900px) {
+  .hero::after { display: none; }
+}
+
+.hero__container { z-index: 1; }
 
 .hero__cta-group {
   display: flex;
