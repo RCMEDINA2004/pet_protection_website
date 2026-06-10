@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './Navbar.css';
+import logo from '../assets/pet_protection_logo.png';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -23,7 +24,7 @@ const Navbar = () => {
       <div className="navbar__container">
         <a href="#hero" className="navbar__logo">
           <div className="navbar__logo-icon">
-            <span className="material-symbols-outlined icon-filled">shield_heart</span>
+            <img src={logo} alt="Pet Protection" className="navbar__logo-img" />
           </div>
           <span className="navbar__logo-text">Pet Protection</span>
         </a>

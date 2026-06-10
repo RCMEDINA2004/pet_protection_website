@@ -124,7 +124,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-body-lg hero__subtitle">
-            Planes de protección médica para mascotas con cobertura en toda Armenia, Quindío. 
+            Planes de protección médica para mascotas con una excelente cobertura. 
             Conectamos tu familia con veterinarias aliadas a través de tecnología de calidad.
           </p>
 
@@ -142,23 +142,23 @@ const Hero = () => {
           {/* Trust Bar */}
           <div className="hero__trust">
             <div className="hero__trust-item">
-              <span className="hero__trust-number">+2.4K</span>
-              <span className="hero__trust-label">Mascotas Protegidas</span>
+              <span className="hero__trust-number">+300 K</span>
+              <span className="hero__trust-label">Mascotas por Proteger</span>
             </div>
             <div className="hero__trust-divider" />
             <div className="hero__trust-item">
               <span className="hero__trust-number">24/7</span>
-              <span className="hero__trust-label">Asistencia</span>
+              <span className="hero__trust-label">Cobertura</span>
             </div>
             <div className="hero__trust-divider" />
             <div className="hero__trust-item">
-              <span className="hero__trust-number">15+</span>
-              <span className="hero__trust-label">Veterinarias Aliadas</span>
+              <span className="hero__trust-number">Armenia, Quindio</span>
+              <span className="hero__trust-label">Ubicacion</span>
             </div>
             <div className="hero__trust-divider" />
             <div className="hero__trust-item">
               <span className="hero__trust-number">98%</span>
-              <span className="hero__trust-label">Satisfacción</span>
+              <span className="hero__trust-label">Efectividad</span>
             </div>
           </div>
         </div>
