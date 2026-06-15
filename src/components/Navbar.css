@@ -9,7 +9,7 @@
 }
 
 .navbar--scrolled {
-  background: rgba(6, 14, 26, 0.88);
+  background: linear-gradient(90deg, #04347b, #ffffff);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border-bottom: 1px solid rgba(255,255,255,0.08);
@@ -55,8 +55,16 @@
 
 .navbar__logo-text {
   font-family: 'Poppins', sans-serif;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 800;
+  -webkit-text-stroke: 0.1px rgba(0, 0, 0, 0.306);
+  text-shadow: 
+    -1px -1px 0 rgba(0, 0, 0, 0.402),
+    1px -1px 0 rgba(0, 0, 0, 0.459),
+    -1px 1px 0 rgba(0, 0, 0, 0.489),
+    1px 1px 0 rgba(0, 0, 0, 0.4),
+    0 1px 0 rgba(0,0,0,0.6),
+    0 6px 8px rgba(0,0,0,0.45);
   color: #fff;
   letter-spacing: -0.02em;
 }
@@ -71,12 +79,24 @@
 
 .navbar__link {
   font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  color: rgba(255,255,255,0.7);
+  font-size: 16px;
+  font-weight: 800;
+  /* remove incorrect font-style usage; weight controls boldness */
+  /* stronger, layered shadow for better contrast on varied backgrounds */
+  color: #ffffff;
+  /* black outline: use -webkit-text-stroke where supported and a multi-offset text-shadow fallback */
+  -webkit-text-stroke: 0.1px rgba(0, 0, 0, 0.139);
+  text-shadow: 
+    -1px -1px 0 rgba(0, 0, 0, 0.402),
+    1px -1px 0 rgba(0, 0, 0, 0.459),
+    -1px 1px 0 rgba(0, 0, 0, 0.489),
+    1px 1px 0 rgba(0, 0, 0, 0.4),
+    0 1px 0 rgba(0,0,0,0.6),
+    0 6px 8px rgba(0,0,0,0.45);
   text-decoration: none;
   transition: color 0.2s ease;
   position: relative;
+  display: inline-block; /* ensure ::after sizing follows each link individually */
 }
 
 .navbar__link::after {
@@ -86,9 +106,10 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #0066FF, #00C6B8);
+  background: linear-gradient(90deg, #0066FF, #e2fffd);
   border-radius: 1px;
-  transition: width 0.3s ease;
+  transition: width 0.3s ease, transform 0.3s ease;
+  transform-origin: left center;
 }
 
 .navbar__link:hover {

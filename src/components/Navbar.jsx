@@ -38,7 +38,6 @@ const Navbar = () => {
         </nav>
 
         <a href="#afiliacion" className="btn btn-primary navbar__cta" onClick={() => setMenuOpen(false)}>
-          <span className="material-symbols-outlined" style={{fontSize:'18px'}}>pets</span>
           Quiero Afiliarme
         </a>
 

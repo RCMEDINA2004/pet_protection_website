@@ -11,12 +11,12 @@
   padding: 120px 0 80px;
   /* Base slate blue-gray background and hero image (no overlay gradient) */
   background-color: #556E77; /* RGB(85,110,119) */
-  background-image: url("../assets/P.png");
+  background-image: url("../assets/golden_wapp.jpg");
   /* Right-side hero image (P.png) covering half the area */
   background-repeat: no-repeat;
   background-position: right center;
   /* Let image scale responsively while keeping aspect ratio; final reduced size */
-  background-size: auto 50%;
+  background-size: auto 100%;
 }
 
 /* Background */
