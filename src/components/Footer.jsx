@@ -18,20 +18,7 @@ const Footer = () => {
 
   return (
     <footer className="footer" id="footer">
-      {/* Top CTA Strip */}
-      <div className="footer__cta-strip">
-        <div className="container footer__cta-inner">
-          <div className="footer__cta-text">
-            <h3 className="footer__cta-title">¿Listo para proteger a tu mascota?</h3>
-            <p className="footer__cta-sub">Únete a +2,400 familias que ya confían en Pet Protection.</p>
-          </div>
-          <a href="#afiliacion" className="btn btn-primary footer__cta-btn">
-            <span className="material-symbols-outlined icon-filled" style={{ fontSize: '18px' }}>favorite</span>
-            Quiero Afiliarme
-          </a>
-        </div>
-      </div>
-
+      
       {/* Main Footer */}
       <div className="footer__main">
         <div className="container footer__grid">
