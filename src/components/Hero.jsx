@@ -130,7 +130,6 @@ const Hero = () => {
 
           <div className="hero__cta-group">
             <a href="#afiliacion" className="btn btn-primary">
-              <span className="material-symbols-outlined icon-filled" style={{fontSize:'18px'}}>favorite</span>
               Quiero Afiliarme
             </a>
             <a href="#planes" className="btn btn-secondary">
@@ -142,8 +141,8 @@ const Hero = () => {
           {/* Trust Bar */}
           <div className="hero__trust">
             <div className="hero__trust-item">
-              <span className="hero__trust-number">+300 K</span>
-              <span className="hero__trust-label">Mascotas por Proteger</span>
+              <span className="hero__trust-number">2027</span>
+              <span className="hero__trust-label">Lanzamiento</span>
             </div>
             <div className="hero__trust-divider" />
             <div className="hero__trust-item">
@@ -152,8 +151,8 @@ const Hero = () => {
             </div>
             <div className="hero__trust-divider" />
             <div className="hero__trust-item">
-              <span className="hero__trust-number">Armenia, Quindio</span>
-              <span className="hero__trust-label">Ubicacion</span>
+              <span className="hero__trust-number">100%</span>
+              <span className="hero__trust-label">Gestion Digital</span>
             </div>
             <div className="hero__trust-divider" />
             <div className="hero__trust-item">

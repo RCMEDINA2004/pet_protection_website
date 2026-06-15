@@ -9,7 +9,7 @@
 }
 
 .navbar--scrolled {
-  background: linear-gradient(90deg, #04347b, #ffffff);
+  background: rgba(6, 14, 26, 0.88);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border-bottom: 1px solid rgba(255,255,255,0.08);
@@ -87,12 +87,12 @@
   /* black outline: use -webkit-text-stroke where supported and a multi-offset text-shadow fallback */
   -webkit-text-stroke: 0.1px rgba(0, 0, 0, 0.139);
   text-shadow: 
-    -1px -1px 0 rgba(0, 0, 0, 0.402),
-    1px -1px 0 rgba(0, 0, 0, 0.459),
+    -1px -1px 0 rgba(0, 0, 0, 0.263),
+    1px -1px 0 rgba(0, 0, 0, 0.26),
     -1px 1px 0 rgba(0, 0, 0, 0.489),
     1px 1px 0 rgba(0, 0, 0, 0.4),
-    0 1px 0 rgba(0,0,0,0.6),
-    0 6px 8px rgba(0,0,0,0.45);
+    0 1px 0 rgba(0, 0, 0, 0.349),
+    0 6px 8px rgba(0, 0, 0, 0.329);
   text-decoration: none;
   transition: color 0.2s ease;
   position: relative;
@@ -122,7 +122,16 @@
 
 .navbar__cta {
   flex-shrink: 0;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 800; 
+  -webkit-text-stroke: 0.1px rgba(0, 0, 0, 0.037);
+  text-shadow: 
+    -1px -1px 0 rgba(0, 0, 0, 0.169),
+    1px -1px 0 rgba(0, 0, 0, 0.185),
+    -1px 1px 0 rgba(0, 0, 0, 0.174),
+    1px 1px 0 rgba(0, 0, 0, 0.4),
+    0 1px 0 rgba(0, 0, 0, 0.269),
+    0 6px 8px rgba(0, 0, 0, 0.285);
   padding: 12px 24px;
 }
 

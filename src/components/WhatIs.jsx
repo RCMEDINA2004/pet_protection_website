@@ -2,16 +2,16 @@ import { useEffect, useRef } from 'react';
 import './WhatIs.css';
 
 const stats = [
-  { icon: 'shield_heart', value: '+2,400', label: 'Mascotas Protegidas', color: '#0066FF' },
-  { icon: 'local_hospital', value: '15+', label: 'Veterinarias Aliadas', color: '#00C6B8' },
-  { icon: 'star', value: '98%', label: 'Familias Satisfechas', color: '#F59E0B' },
-  { icon: 'bolt', value: '<2min', label: 'Respuesta Promedio', color: '#8B5CF6' },
+  { icon: 'health_and_safety', value: 'Disponible', label: 'Se brinda proteccion a mascotas del hogar, perros y gatos.', color: '#0066FF' },
+  { icon: 'local_hospital', value: 'Alcance', label: 'Veterinarias de confianza, red de aliados comprometidos con la salud animal en toda la ciudad.', color: '#00C6B8' },
+  { icon: 'star', value: 'Manejo', label: 'Llevarás el control completo de tu mascota y cuidarás de su salud en cada momento.', color: '#F59E0B' },
+  { icon: 'bolt', value: 'Rapidez', label: 'Atención ágil, respuesta rápida y acompañamiento oportuno.', color: '#8B5CF6' },
 ];
 
 const highlights = [
   { icon: 'smartphone', title: 'App Móvil', desc: 'Gestiona todo desde tu teléfono en segundos.' },
   { icon: 'location_on', title: 'Red Local', desc: 'Veterinarias aliadas en Armenia y Quindío.' },
-  { icon: 'health_and_safety', title: 'Cobertura Total', desc: 'Desde consultas hasta emergencias críticas.' },
+  { icon: 'health_and_safety', title: 'Servicios', desc: 'Desde consultas hasta emergencias críticas.' },
   { icon: 'support_agent', title: 'Soporte 24/7', desc: 'Siempre disponibles cuando más nos necesitas.' },
 ];
 
@@ -45,10 +45,10 @@ const WhatIs = () => {
             para toda la familia
           </h2>
           <p className="text-body-lg whatis__subtitle">
-            Pet Protection nace para brindar protección médica inteligente a las mascotas. 
-            Permitimos que las familias puedan responder rápidamente ante emergencias veterinarias 
-            sin preocuparse por gastos inesperados. Nuestra plataforma conecta usuarios con 
-            veterinarias aliadas distribuidas en Armenia, Quindío.
+           Pet Protection nace de una verdad dolorosa: el amor por una mascota, aunque incondicional, muchas veces depende de la capacidad económica. 
+           Una emergencia veterinaria puede amenazar tanto la salud del animal como la estabilidad financiera del hogar. Por ello, buscamos transformar gastos imprevistos y elevados en cuotas accesibles y predecibles, 
+           garantizando atención médica de calidad sin generar estrés financiero.
+
           </p>
         </div>
 
@@ -82,21 +82,13 @@ const WhatIs = () => {
                 alt="Familia feliz con su mascota usando la app Pet Protection"
               />
             </div>
-            {/* Floating badge */}
-            <div className="whatis__float-badge">
-              <span style={{ fontSize: '24px' }}>🏥</span>
-              <div>
-                <p className="whatis__badge-title">Red Veterinaria</p>
-                <p className="whatis__badge-sub">Armenia · Quindío</p>
-              </div>
-            </div>
           </div>
 
           {/* Right: Highlights */}
           <div className="whatis__highlights reveal-right">
             <p className="whatis__highlights-intro">
-              Somos una startup tecnológica con una misión clara: que ninguna mascota se quede 
-              sin atención por falta de dinero en una emergencia.
+              Somos una startup tecnológica con una misión clara: Acompañar el cuidado preventivo de tu mascota y asegurar
+              que ninguna se quede sin atención por falta de dinero en una emergencia.
             </p>
             <div className="whatis__highlights-grid">
               {highlights.map((h, i) => (
@@ -110,7 +102,6 @@ const WhatIs = () => {
               ))}
             </div>
             <a href="#afiliacion" className="btn btn-primary whatis__cta">
-              <span className="material-symbols-outlined icon-filled" style={{ fontSize: '18px' }}>favorite</span>
               Protege a tu mascota hoy
             </a>
           </div>

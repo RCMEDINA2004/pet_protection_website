@@ -1,6 +1,6 @@
 .story {
   padding: 120px 0;
-  background: linear-gradient(90deg, #1f66d1, #ff3b3b);
+  background: var(--surface-0);
   position: relative;
   overflow: hidden;
 }
@@ -140,7 +140,7 @@
 
 /* Callout */
 .story__callout {
-  background: linear-gradient(135deg, rgba(0,102,255,0.12), rgba(0,198,184,0.08));
+  background: linear-gradient(135deg, rgba(6, 49, 112, 0.12), rgba(0,198,184,0.08));
   border: 1px solid rgba(0,198,184,0.2);
   border-radius: var(--radius-xl);
   padding: 48px 64px;
