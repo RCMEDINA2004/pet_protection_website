@@ -1,24 +1,25 @@
 import './Footer.css';
+import logo from '../assets/logopet-sinFondoC.png';
 
 const Footer = () => {
   const year = new Date().getFullYear();
 
   const links = {
-    Producto: ['Beneficios', 'Planes', 'App Móvil', 'Red Veterinaria', 'Cómo Funciona'],
-    Compañía: ['Nuestra Historia', 'Equipo Fundador', 'Blog', 'Trabaja con Nosotros'],
-    Legal: ['Términos y Condiciones', 'Política de Privacidad', 'Preguntas Frecuentes', 'Contacto'],
+    Producto: ['Inicio ', 'Planes', 'Quienes Somos', 'Cómo Funciona'],
+    Compañía: ['Nuestra Historia', 'Equipo Fundador', 'Testimonios', 'Linea del tiempo'],
+    Legal: ['Términos y Condiciones', 'Política de Privacidad', 'Preguntas Frecuentes'],
   };
 
   const socials = [
     { icon: 'public',            label: 'Web',       href: '#' },
-    { icon: 'alternate_email',   label: 'Email',     href: 'mailto:info@petprotection.co' },
+    { icon: 'alternate_email',   label: 'Email',     href: 'mailto:admin@petprotection.co' },
     { icon: 'chat',              label: 'WhatsApp',  href: '#' },
     { icon: 'play_circle',       label: 'YouTube',   href: '#' },
   ];
 
   return (
     <footer className="footer" id="footer">
-      
+
       {/* Main Footer */}
       <div className="footer__main">
         <div className="container footer__grid">
@@ -26,12 +27,12 @@ const Footer = () => {
           <div className="footer__brand">
             <div className="footer__logo">
               <div className="footer__logo-icon">
-                <span className="material-symbols-outlined icon-filled" style={{ fontSize: '22px' }}>shield_heart</span>
+                <img src={logo} alt="Pet Protection" className="navbar__logo-img" />
               </div>
               <span className="footer__logo-text">Pet Protection</span>
             </div>
             <p className="footer__tagline">
-              Tecnología con corazón para proteger a quienes te acompañan incondicionalmente.
+              Tecnología creada con el corazón para proteger a quienes te acompañan y te aman incondicionalmente cada dia.
             </p>
             <div className="footer__location">
               <span className="material-symbols-outlined icon-filled" style={{ fontSize: '16px', color: '#00C6B8' }}>location_on</span>
@@ -65,10 +66,9 @@ const Footer = () => {
             <h4 className="footer__col-title">Contacto</h4>
             <div className="footer__contact-items">
               {[
-                { icon: 'email', text: 'info@petprotection.co' },
-                { icon: 'phone', text: '+57 (606) 000-0000' },
-                { icon: 'schedule', text: 'Lun–Vie: 8am–6pm' },
-                { icon: 'support_agent', text: 'Emergencias: 24/7' },
+                { icon: 'email', text: 'admin@petprotection.co' },
+                { icon: 'phone', text: '+57 314 6241875' },
+                { icon: 'schedule', text: 'Emergencias: 24/7' },
               ].map(c => (
                 <div key={c.text} className="footer__contact-item">
                   <span className="material-symbols-outlined icon-filled" style={{ fontSize: '16px', color: '#00C6B8' }}>{c.icon}</span>
@@ -81,7 +81,7 @@ const Footer = () => {
             <div className="footer__badges">
               <div className="footer__badge">
                 <span className="material-symbols-outlined icon-filled" style={{ fontSize: '14px', color: '#00C6B8' }}>verified</span>
-                Empresa verificada
+                Empresa Certificada
               </div>
               <div className="footer__badge">
                 <span className="material-symbols-outlined icon-filled" style={{ fontSize: '14px', color: '#0066FF' }}>lock</span>
@@ -96,16 +96,8 @@ const Footer = () => {
       <div className="footer__bottom">
         <div className="container footer__bottom-inner">
           <p className="footer__copyright">
-            © {year} Pet Protection. Todos los derechos reservados. | Armenia, Quindío, Colombia 🇨🇴
+            © {year} Pet Protection SAS. Todos los derechos reservados. | Armenia, Quindío, Colombia CO
           </p>
-          <div className="footer__bottom-links">
-            <a href="#" className="footer__bottom-link">Términos</a>
-            <a href="#" className="footer__bottom-link">Privacidad</a>
-            <a href="#" className="footer__bottom-link">Cookies</a>
-          </div>
-          <div className="footer__made-with">
-            Hecho con <span style={{ color: '#EF4444' }}>❤️</span> para las mascotas de Colombia
-          </div>
         </div>
       </div>
     </footer>

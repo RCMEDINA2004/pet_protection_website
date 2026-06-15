@@ -62,7 +62,6 @@
 .footer__logo-icon {
   width: 40px; height: 40px;
   border-radius: 10px;
-  background: linear-gradient(135deg, #0066FF, #00C6B8);
   display: flex;
   align-items: center;
   justify-content: center;
