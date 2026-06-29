@@ -10,7 +10,6 @@ import HowItWorks      from './components/HowItWorks';
 import Benefits        from './components/Benefits';
 import Team            from './components/Team';
 import Plans           from './components/Plans';
-import Testimonials    from './components/Testimonials';
 import AffiliationForm from './components/AffiliationForm';
 import Footer          from './components/Footer';
 
@@ -44,8 +43,6 @@ function App() {
         <Benefits        />
         <Team            />
         <Plans           />
-        
-        <Testimonials    />
         <AffiliationForm />
       </main>
       <Footer />

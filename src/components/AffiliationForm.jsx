@@ -92,7 +92,7 @@ const AffiliationForm = () => {
               </div>
               <div>
                 <p className="affiliation__proof-text">
-                  <strong>+2,400 mascotas</strong> ya están protegidas
+                  <strong>+2,400 mascotas</strong> están listas para ser protegidas
                 </p>
                 <div className="affiliation__proof-stars">
                   {[1,2,3,4,5].map(s => (
@@ -142,7 +142,7 @@ const AffiliationForm = () => {
                     <label htmlFor="fullName">Nombre Completo</label>
                     <input
                       id="fullName" name="fullName" type="text" required
-                      placeholder="Ej: María Fernanda López"
+                      placeholder="Ej: Mariana Medina"
                       value={form.fullName} onChange={handleChange}
                     />
                   </div>
@@ -153,7 +153,7 @@ const AffiliationForm = () => {
                     <label htmlFor="email">Correo Electrónico</label>
                     <input
                       id="email" name="email" type="email" required
-                      placeholder="tu@correo.com"
+                      placeholder="correo@gmail.com"
                       value={form.email} onChange={handleChange}
                     />
                   </div>
@@ -161,7 +161,7 @@ const AffiliationForm = () => {
                     <label htmlFor="phone">Teléfono / WhatsApp</label>
                     <input
                       id="phone" name="phone" type="tel" required
-                      placeholder="+57 300 000 0000"
+                      placeholder="+57 304 780 1010"
                       value={form.phone} onChange={handleChange}
                     />
                   </div>
@@ -190,7 +190,7 @@ const AffiliationForm = () => {
                     <label htmlFor="petName">Nombre de la Mascota</label>
                     <input
                       id="petName" name="petName" type="text" required
-                      placeholder="Ej: Max"
+                      placeholder="Ej: Mara"
                       value={form.petName} onChange={handleChange}
                     />
                   </div>
@@ -203,8 +203,6 @@ const AffiliationForm = () => {
                       <option value="" disabled>Seleccionar...</option>
                       <option value="Perro">🐕 Perro</option>
                       <option value="Gato">🐈 Gato</option>
-                      <option value="Conejo">🐇 Conejo</option>
-                      <option value="Otro">🐾 Otro</option>
                     </select>
                   </div>
                 </div>
@@ -217,13 +215,13 @@ const AffiliationForm = () => {
                   </div>
                   <input
                     id="petAge" name="petAge" type="range"
-                    min="0" max="20" step="1"
+                    min="0" max="15" step="0"
                     value={petAge}
                     onChange={e => setPetAge(Number(e.target.value))}
                     className="affiliation__slider"
                   />
                   <div className="affiliation__slider-labels">
-                    <span>0</span><span>5</span><span>10</span><span>15</span><span>20 años</span>
+                    <span>6 meses</span><span>5</span><span>10</span><span>15 años</span>
                   </div>
                 </div>
 

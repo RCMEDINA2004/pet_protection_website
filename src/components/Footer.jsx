@@ -10,13 +10,6 @@ const Footer = () => {
     Legal: ['Términos y Condiciones', 'Política de Privacidad', 'Preguntas Frecuentes'],
   };
 
-  const socials = [
-    { icon: 'public',            label: 'Web',       href: '#' },
-    { icon: 'alternate_email',   label: 'Email',     href: 'mailto:admin@petprotection.co' },
-    { icon: 'chat',              label: 'WhatsApp',  href: '#' },
-    { icon: 'play_circle',       label: 'YouTube',   href: '#' },
-  ];
-
   return (
     <footer className="footer" id="footer">
 
@@ -37,13 +30,6 @@ const Footer = () => {
             <div className="footer__location">
               <span className="material-symbols-outlined icon-filled" style={{ fontSize: '16px', color: '#00C6B8' }}>location_on</span>
               Armenia, Quindío, Colombia
-            </div>
-            <div className="footer__socials">
-              {socials.map(s => (
-                <a key={s.label} href={s.href} className="footer__social" aria-label={s.label} title={s.label}>
-                  <span className="material-symbols-outlined icon-filled" style={{ fontSize: '18px' }}>{s.icon}</span>
-                </a>
-              ))}
             </div>
           </div>
 
