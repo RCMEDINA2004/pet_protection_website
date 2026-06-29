@@ -3,31 +3,31 @@ import './OurStory.css';
 
 const timeline = [
   {
-    year: '2023',
+    year: 'Principios de 2025',
     icon: 'lightbulb',
-    title: 'La Chispa Inicial',
+    title: 'Nace una idea brillante',
     desc: 'Un grupo de ingenieros de software en Armenia, Quindío, observó que muchas familias amaban profundamente a sus mascotas, pero una emergencia veterinaria podía convertirse en una carga económica devastadora.',
     color: '#0066FF',
   },
   {
-    year: '2024',
-    icon: 'code',
-    title: 'Nace la Plataforma',
-    desc: 'Decidieron crear una solución tecnológica capaz de brindar protección médica accesible. Meses de desarrollo colaborativo, diseño UX de clase mundial y negociación con veterinarias aliadas.',
+    year: 'Mediados de 2025',
+    icon: 'gavel',
+    title: 'Se constituye legalmente Pet Protection',
+    desc: 'Decidieron crear y constituir la empresa legalmente, con ayuda de abogados y asesorias, Pet Protection dejó de ser un sueño y se volvió una realidad.',
     color: '#00C6B8',
   },
   {
-    year: '2024',
+    year: 'Finales de 2025',
     icon: 'handshake',
-    title: 'Primeras Alianzas',
-    desc: 'Firmamos acuerdos con las principales clínicas veterinarias de Armenia y el Quindío. Nuestra red comenzó a tomar forma, conectando familias con atención de calidad.',
+    title: 'Primeras posibles alianzas con veterinarias',
+    desc: 'Visitamos lasprincipales clínicas veterinarias de Armenia y el Quindío. Nuestra red comenzó a tomar forma, conectando familias con atención de calidad.',
     color: '#8B5CF6',
   },
   {
-    year: 'Hoy',
+    year: '2026 - 2027',
     icon: 'rocket_launch',
-    title: 'Protección Sin Límites',
-    desc: 'Operamos como la plataforma de protección médica para mascotas más innovadora de la región, con una app móvil premium y una misión que transforma vidas cada día.',
+    title: 'Plataforma de proteccion avanzada',
+    desc: 'Desarrollo de la plataforma de protección médica para mascotas más innovadora de la región, con una app móvil premium y una misión que transforma vidas cada día. Proximo lanzamiento mediados de 2027.',
     color: '#F59E0B',
   },
 ];
@@ -100,12 +100,11 @@ const OurStory = () => {
         {/* Closing Callout */}
         <div className="story__callout reveal">
           <div className="story__callout-inner">
-            <div className="story__callout-emoji">❤️</div>
             <div className="story__callout-content">
-              <h3 className="story__callout-title">
-                "Nuestra misión es que ninguna mascota se quede sin atención por falta de dinero en una emergencia."
-              </h3>
-              <p className="story__callout-sub">— Equipo Fundador, Pet Protection · Armenia, Quindío</p>
+              <h4 className="story__callout-title">
+                "Nuestra misión es que ninguna mascota se quede sin proteccion por falta de dinero en una emergencia."
+              </h4>
+              <p className="story__callout-sub">-Equipo Fundador, Pet Protection</p>
             </div>
           </div>
         </div>

@@ -1,5 +1,7 @@
 import { useEffect, useRef } from 'react';
 import './WhatIs.css';
+import photo_1 from '../assets/photo_1.jpg';
+import photo_2 from '../assets/photo_2.jpg';
 
 const stats = [
   { icon: 'health_and_safety', value: 'Disponible', label: 'Se brinda proteccion a mascotas del hogar, perros y gatos.', color: '#0066FF' },
@@ -71,14 +73,14 @@ const WhatIs = () => {
           <div className="whatis__visual reveal-left">
             <div className="whatis__img-main">
               <img
-                src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800&q=80"
+                src={photo_1}
                 alt="Veterinaria examinando a un perro golden retriever en clínica moderna"
               />
               <div className="whatis__img-overlay" />
             </div>
             <div className="whatis__img-secondary">
               <img
-                src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?w=500&q=80"
+                src={photo_2}
                 alt="Familia feliz con su mascota usando la app Pet Protection"
               />
             </div>
