@@ -119,7 +119,7 @@ const Team = () => {
         {/* Trust Badge */}
         <div className="team__trust reveal">
           <div className="team__trust-icon">
-            <span className="material-symbols-outlined icon-filled" style={{ fontSize: '28px', color: '#00C6B8' }}>verified</span>
+            <span className="material-symbols-outlined icon-filled" style={{ fontSize: '28px', color: '#016bff' }}>verified</span>
           </div>
           <div>
             <h4 className="team__trust-title">Equipo verificado y comprometido</h4>

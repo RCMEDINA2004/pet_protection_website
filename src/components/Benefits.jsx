@@ -3,23 +3,23 @@ import './Benefits.css';
 
 const benefits = [
   {
-    icon: 'bolt',
-    title: 'Atención Rápida',
-    desc: 'Respuesta en menos de 2 minutos. Cuando tu mascota lo necesita, cada segundo cuenta.',
+    icon: 'history',
+    title: 'Servicio De Historial Médico Digital',
+    desc: 'Toda la información médica de tu mascota en un solo lugar. Consulta diagnósticos, tratamientos, vacunas y recomendaciones cuando lo necesites.',
     color: '#F59E0B',
     bg: 'rgba(245,158,11,0.1)',
   },
   {
-    icon: 'local_hospital',
-    title: 'Red Veterinaria Aliada',
-    desc: 'Más de 15 clínicas veterinarias verificadas y de alta calidad en toda Armenia y el Quindío.',
+    icon: 'pets',
+    title: 'Cobertura para todas las Etapas de Vida',
+    desc: 'Desde cachorros y gatitos hasta mascotas adultas y senior, nuestros planes acompañan a tu mejor amigo en cada etapa de su vida.',
     color: '#0066FF',
     bg: 'rgba(0,102,255,0.1)',
   },
   {
-    icon: 'location_on',
-    title: 'Cobertura Local',
-    desc: 'Diseñado específicamente para Armenia, Quindío. Conocemos tu ciudad y sus veterinarias.',
+    icon: 'family_restroom',
+    title: 'Tranquilidad para toda la Familia',
+    desc: 'Disfruta cada momento con tu mascota sabiendo que cuentas con respaldo profesional ante cualquier eventualidad, reduciendo preocupaciones y gastos inesperados.',
     color: '#10B981',
     bg: 'rgba(16,185,129,0.1)',
   },
@@ -38,9 +38,9 @@ const benefits = [
     bg: 'rgba(0,198,184,0.1)',
   },
   {
-    icon: 'support_agent',
-    title: 'Soporte Continuo',
-    desc: 'Un equipo humano disponible 24/7 para orientarte, resolver dudas y acompañarte siempre.',
+    icon: 'medical_services',
+    title: 'Planes Flexibles',
+    desc: 'Elige la cobertura que mejor se adapte a las necesidades de tu mascota y a tu presupuesto, con opciones diseñadas para diferentes estilos de vida.',
     color: '#EF4444',
     bg: 'rgba(239,68,68,0.1)',
   },
@@ -93,10 +93,6 @@ const Benefits = () => {
 
               <h3 className="benefit-card__title">{b.title}</h3>
               <p className="benefit-card__desc">{b.desc}</p>
-
-              <div className="benefit-card__arrow" style={{ color: b.color }}>
-                <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>arrow_forward</span>
-              </div>
             </div>
           ))}
         </div>

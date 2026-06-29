@@ -20,7 +20,7 @@ const steps = [
     number: '03',
     icon: 'location_on',
     title: 'Encuentras la veterinaria aliada más cercana',
-    desc: 'El mapa en tiempo real te muestra todas las clínicas aliadas disponibles cerca de ti.',
+    desc: 'Un listado en tiempo real que te muestra todas las clínicas aliadas disponibles cerca de ti.',
     color: '#8B5CF6',
   },
   {
@@ -75,14 +75,6 @@ const HowItWorks = () => {
               className="how__step reveal"
               style={{ transitionDelay: `${i * 0.12}s` }}
             >
-              {/* Connector Line (between cards) */}
-              {i < steps.length - 1 && (
-                <div className="how__connector">
-                  <div className="how__connector-line" />
-                  <span className="material-symbols-outlined how__connector-arrow">arrow_forward</span>
-                </div>
-              )}
-
               <div className="how__step-card glass-card">
                 {/* Number badge */}
                 <div className="how__step-number" style={{ color: step.color }}>

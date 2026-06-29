@@ -103,9 +103,6 @@ const WhatIs = () => {
                 </div>
               ))}
             </div>
-            <a href="#afiliacion" className="btn btn-primary whatis__cta">
-              Protege a tu mascota hoy
-            </a>
           </div>
         </div>
       </div>

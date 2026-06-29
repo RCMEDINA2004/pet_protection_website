@@ -1,5 +1,7 @@
 import { useEffect, useRef } from 'react';
 import './TheProblem.css';
+import sin_seguro from '../assets/sin_seguro.png';
+import con_seguro from '../assets/con_seguro.png';
 
 const TheProblem = () => {
   const sectionRef = useRef(null);
@@ -69,11 +71,11 @@ const TheProblem = () => {
             {/* Emotional image */}
             <div className="problem__image">
               <img
-                src="https://images.unsplash.com/photo-1559526324-593bc073d938?w=600&q=80"
+                src={sin_seguro}
                 alt="Familia preocupada por facturas veterinarias sin tener cómo pagar"
               />
               <div className="problem__image-overlay">
-                <p className="problem__image-caption">😔 Una situación que ninguna familia debería vivir</p>
+                <p className="problem__image-caption">Una situación que ninguna familia debería vivir</p>
               </div>
             </div>
           </div>
@@ -83,7 +85,6 @@ const TheProblem = () => {
             <div className="problem__arrow-circle">
               <span className="material-symbols-outlined icon-filled" style={{ fontSize: '36px', color: '#00C6B8' }}>arrow_forward</span>
             </div>
-            <p className="problem__arrow-label">Con Pet Protection</p>
           </div>
 
           {/* Right: The Solution */}
@@ -97,7 +98,7 @@ const TheProblem = () => {
 
             <div className="problem__pain-points">
               {[
-                { icon: 'shield_check', text: 'Cobertura activada en segundos desde tu teléfono' },
+                { icon: 'health_and_safety', text: 'Cobertura activada en segundos desde tu teléfono' },
                 { icon: 'location_on', text: 'Veterinaria aliada más cercana en el mapa al instante' },
                 { icon: 'favorite', text: 'Atención inmediata con paz mental total' },
                 { icon: 'savings', text: 'Protección financiera sin gastos sorpresa' },
@@ -115,11 +116,11 @@ const TheProblem = () => {
             {/* Solution image */}
             <div className="problem__image">
               <img
-                src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&q=80"
+                src={con_seguro}
                 alt="Familia feliz con su mascota sana después de usar Pet Protection"
               />
               <div className="problem__image-overlay problem__image-overlay--good">
-                <p className="problem__image-caption">😊 Tranquilidad garantizada para toda la familia</p>
+                <p className="problem__image-caption">Tranquilidad garantizada para toda la familia</p>
               </div>
             </div>
           </div>
@@ -128,9 +129,9 @@ const TheProblem = () => {
         {/* Bottom Stat */}
         <div className="problem__stat-bar reveal">
           {[
-            { value: '73%', label: 'de dueños de mascotas no tienen cómo cubrir emergencias veterinarias' },
-            { value: '$1.8M', label: 'costo promedio de una cirugía de urgencia en Colombia' },
-            { value: '1 de 3', label: 'mascotas no reciben atención oportuna por razones económicas' },
+            { value: '88%', label: 'De dueños de mascotas no tienen cómo cubrir emergencias veterinarias' },
+            { value: '$2.1M', label: 'Costo promedio de una cirugía de urgencia y hospitalización en Colombia' },
+            { value: '1 de 15', label: 'Mascotas no reciben atención especializada por razones económicas' },
           ].map((s, i) => (
             <div key={i} className="problem__stat">
               <span className="problem__stat-value">{s.value}</span>

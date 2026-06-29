@@ -129,9 +129,6 @@ const Hero = () => {
           </p>
 
           <div className="hero__cta-group">
-            <a href="#afiliacion" className="btn btn-primary">
-              Quiero Afiliarme
-            </a>
             <a href="#planes" className="btn btn-secondary">
               Conocer Planes
               <span className="material-symbols-outlined" style={{fontSize:'18px'}}>arrow_forward</span>
