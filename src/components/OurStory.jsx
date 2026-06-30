@@ -20,7 +20,7 @@ const timeline = [
     year: 'Finales de 2025',
     icon: 'handshake',
     title: 'Primeras posibles alianzas con veterinarias',
-    desc: 'Visitamos lasprincipales clínicas veterinarias de Armenia y el Quindío. Nuestra red comenzó a tomar forma, conectando familias con atención de calidad.',
+    desc: 'Visitamos las principales clínicas veterinarias de Armenia, Quindío. Nuestra red comenzó a tomar forma, conectando familias con atención de calidad.',
     color: '#8B5CF6',
   },
   {

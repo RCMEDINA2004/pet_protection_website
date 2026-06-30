@@ -67,7 +67,7 @@ const Benefits = () => {
         <div className="benefits__header reveal">
           <span className="text-overline">Beneficios</span>
           <h2 className="text-headline benefits__title">
-            Todo lo que tu mascota{' '}
+            Todo lo que tu MASCOTA{' '}
             <span className="gradient-text">merece</span>
           </h2>
           <p className="text-body-lg benefits__subtitle">

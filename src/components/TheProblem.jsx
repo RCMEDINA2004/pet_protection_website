@@ -31,7 +31,7 @@ const TheProblem = () => {
           <h2 className="text-headline problem__title">
             Las emergencias{' '}
             <span style={{ background: 'linear-gradient(135deg,#FF6B6B,#FF9F43)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text' }}>
-              no avisan
+              NO avisan
             </span>
           </h2>
           <p className="text-body-lg problem__subtitle">
