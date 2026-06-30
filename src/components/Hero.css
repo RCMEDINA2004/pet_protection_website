@@ -50,21 +50,66 @@
 
 @media (max-width: 900px) {
   /* For tablets and smaller, let the image cover full area but positioned top */
-  .hero { background-position: center top; background-size: cover; }
-  .hero::before { background: linear-gradient(180deg, rgba(6,16,22,0.6) 0%, rgba(6,16,22,0.2) 50%, rgba(6,16,22,0) 100%); }
-  .hero__container { grid-template-columns: 1fr; padding-right: 0; padding-left: 4vw; padding-top: 40px; }
-  .hero__subtitle { max-width: 640px; margin: 0 auto 24px; }
-  .hero__trust { justify-content: center; }
-}
-
-/* Ensure the right column doesn't collapse when the image is hidden on small screens */
-@media (max-width: 900px) {
-  .hero__container { grid-template-columns: 1fr; }
+  .hero {
+    background-position: center top;
+    background-size: cover;
+    padding: 100px 0 60px;
+  }
+  .hero::before {
+    background: linear-gradient(180deg, rgba(6,16,22,0.85) 0%, rgba(6,16,22,0.45) 40%, rgba(6,16,22,0) 100%);
+  }
+  .hero__container {
+    grid-template-columns: 1fr;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 40px;
+    gap: 32px;
+    align-items: flex-start;
+  }
+  .hero__title {
+    font-size: 48px;
+    line-height: 1.05;
+  }
+  .hero__subtitle {
+    max-width: 100%;
+    margin: 0 auto 24px;
+    font-size: 16px;
+  }
+  .hero__cta-group {
+    justify-content: center;
+  }
+  .hero__trust {
+    justify-content: center;
+    gap: 16px;
+  }
 }
 
 @media (max-width: 500px) {
-  .hero { background-position: center top; background-size: cover; padding: 80px 0 60px; }
-  .hero__container { padding-left: 20px; padding-right: 20px; }
+  .hero {
+    background-position: center top;
+    background-size: cover;
+    padding: 80px 0 60px;
+  }
+  .hero__container {
+    padding-left: 16px;
+    padding-right: 16px;
+    gap: 24px;
+  }
+  .hero__title {
+    font-size: 34px;
+    line-height: 1.1;
+  }
+  .hero__subtitle {
+    font-size: 15px;
+    margin-bottom: 28px;
+  }
+  .hero__cta-group {
+    justify-content: center;
+  }
+  .hero__trust {
+    justify-content: center;
+    gap: 12px;
+  }
 }
 
 /* divider removed */
