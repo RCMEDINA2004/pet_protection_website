@@ -190,14 +190,17 @@
   line-height: 1.02;
   font-family: 'Poppins', sans-serif;
   font-weight: 800;
-  font-size: 66px;
+  font-size: clamp(44px, 4.5vw, 66px);
   letter-spacing: -0.02em;
+  word-break: break-word;
+  max-width: 100%;
 }
 
 .hero__subtitle {
   color: rgba(255,255,255,0.68);
   margin-bottom: 40px;
   max-width: 520px;
+  font-size: clamp(16px, 1.4vw, 18px);
 }
 
 /* Gradient-highlighted word style (use by wrapping the word in a span.highlight) */
@@ -584,18 +587,80 @@
   .hero__float-card--right { right: -20px; }
 }
 
+@media (max-width: 1100px) {
+  .hero__title {
+    font-size: clamp(42px, 4vw, 58px);
+  }
+  .hero__subtitle {
+    font-size: 17px;
+    max-width: 540px;
+  }
+}
+
 @media (max-width: 900px) {
   .hero__container {
     grid-template-columns: 1fr;
     text-align: center;
     gap: 40px;
   }
-  .hero__subtitle { max-width: 100%; }
-  .hero__cta-group { justify-content: center; }
-  .hero__trust { justify-content: center; }
-  .hero__mockup { padding: 20px 0; }
-  .hero__float-card--left  { display: none; }
-  .hero__float-card--right { display: none; }
+  .hero__title {
+    font-size: clamp(38px, 5.5vw, 48px);
+    line-height: 1.08;
+    margin-bottom: 20px;
+  }
+  .hero__subtitle {
+    max-width: 100%;
+    margin: 0 auto 24px;
+    font-size: 16px;
+  }
+  .hero__cta-group {
+    justify-content: center;
+    width: 100%;
+  }
+  .hero__cta-group .btn {
+    min-width: 220px;
+  }
+  .hero__trust {
+    justify-content: center;
+    gap: 16px;
+    padding-top: 24px;
+  }
+  .hero__trust-item {
+    min-width: 120px;
+    text-align: center;
+  }
+  .hero__trust-divider {
+    display: none;
+  }
+  .hero__mockup {
+    padding: 20px 0;
+  }
+  .hero__float-card--left,
+  .hero__float-card--right {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: clamp(32px, 7vw, 42px);
+    line-height: 1.15;
+  }
+  .hero__subtitle {
+    font-size: 15px;
+  }
+  .hero__cta-group {
+    justify-content: center;
+  }
+  .hero__cta-group .btn {
+    width: 100%;
+    max-width: 320px;
+    padding: 14px 24px;
+  }
+  .hero__trust {
+    padding-top: 20px;
+    gap: 12px;
+  }
 }
 
 @media (max-width: 500px) {
