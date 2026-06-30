@@ -283,7 +283,7 @@ const AffiliationForm = () => {
                     </>
                   ) : (
                     <>
-                      <span className="material-symbols-outlined icon-filled" style={{ fontSize: '20px' }}>favorite</span>
+                      <span className="material-symbols-outlined icon-filled" style={{ fontSize: '20px' }}>Security</span>
                       Solicitar Afiliación
                       <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>arrow_forward</span>
                     </>
