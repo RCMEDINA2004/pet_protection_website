@@ -1,5 +1,5 @@
 import './Footer.css';
-import logo from '../assets/logopet-sinFondoC.png';
+import PetProtectionLogo from './PetProtectionLogo';
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -46,7 +46,7 @@ const Footer = () => {
           <div className="footer__brand">
             <div className="footer__logo">
               <div className="footer__logo-icon">
-                <img src={logo} alt="Pet Protection" className="navbar__logo-img" />
+                <PetProtectionLogo />
               </div>
               <span className="footer__logo-text">Pet Protection</span>
             </div>

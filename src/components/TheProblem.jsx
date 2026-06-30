@@ -73,6 +73,8 @@ const TheProblem = () => {
               <img
                 src={sin_seguro}
                 alt="Familia preocupada por facturas veterinarias sin tener cómo pagar"
+                loading="lazy"
+                decoding="async"
               />
               <div className="problem__image-overlay">
                 <p className="problem__image-caption">Una situación que ninguna familia debería vivir</p>
@@ -118,6 +120,8 @@ const TheProblem = () => {
               <img
                 src={con_seguro}
                 alt="Familia feliz con su mascota sana después de usar Pet Protection"
+                loading="lazy"
+                decoding="async"
               />
               <div className="problem__image-overlay problem__image-overlay--good">
                 <p className="problem__image-caption">Tranquilidad garantizada para toda la familia</p>
