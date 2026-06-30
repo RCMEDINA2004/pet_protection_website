@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, Suspense, lazy } from 'react';
 import './App.css';
 
 import Navbar          from './components/Navbar';
@@ -8,10 +8,12 @@ import OurStory        from './components/OurStory';
 import TheProblem      from './components/TheProblem';
 import HowItWorks      from './components/HowItWorks';
 import Benefits        from './components/Benefits';
-import Team            from './components/Team';
-import Plans           from './components/Plans';
-import AffiliationForm from './components/AffiliationForm';
-import Footer          from './components/Footer';
+
+// Lazy load components that appear below the fold
+const Team            = lazy(() => import('./components/Team'));
+const Plans           = lazy(() => import('./components/Plans'));
+const AffiliationForm = lazy(() => import('./components/AffiliationForm'));
+const Footer          = lazy(() => import('./components/Footer'));
 
 function App() {
   // Global scroll reveal observer — catches any leftover .reveal elements
@@ -31,6 +33,17 @@ function App() {
     return () => obs.disconnect();
   }, []);
 
+  // Lazy load images with native lazy loading
+  useEffect(() => {
+    const images = document.querySelectorAll('img:not([loading])');
+    images.forEach(img => {
+      if (!img.closest('.hero') && !img.closest('[data-eager]')) {
+        img.setAttribute('loading', 'lazy');
+        img.setAttribute('decoding', 'async');
+      }
+    });
+  }, []);
+
   return (
     <div className="app">
       <Navbar />
@@ -41,11 +54,19 @@ function App() {
         <TheProblem      />
         <HowItWorks      />
         <Benefits        />
-        <Team            />
-        <Plans           />
-        <AffiliationForm />
+        <Suspense fallback={<div style={{minHeight: '100vh'}} />}>
+          <Team            />
+        </Suspense>
+        <Suspense fallback={<div style={{minHeight: '100vh'}} />}>
+          <Plans           />
+        </Suspense>
+        <Suspense fallback={<div style={{minHeight: '100vh'}} />}>
+          <AffiliationForm />
+        </Suspense>
       </main>
-      <Footer />
+      <Suspense fallback={<div style={{minHeight: '300px'}} />}>
+        <Footer />
+      </Suspense>
 
       {/* Floating WhatsApp Button */}
       <a
