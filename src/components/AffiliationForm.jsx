@@ -16,6 +16,7 @@ const AffiliationForm = () => {
     fullName: '', email: '', phone: '', city: '',
     petName: '', petType: '', message: '',
   });
+  const [errors, setErrors] = useState({});
 
   useEffect(() => {
     const els = sectionRef.current?.querySelectorAll('.reveal, .reveal-left, .reveal-right');
@@ -30,10 +31,31 @@ const AffiliationForm = () => {
 
   const handleChange = e => {
     setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
+    setErrors(prev => {
+      const next = { ...prev };
+      delete next[e.target.name];
+      return next;
+    });
+  };
+
+  const validateForm = () => {
+    const requiredFields = ['fullName', 'email', 'phone', 'city', 'petName', 'petType'];
+    const nextErrors = {};
+
+    requiredFields.forEach(field => {
+      if (!form[field] || form[field].toString().trim() === '') {
+        nextErrors[field] = true;
+      }
+    });
+
+    setErrors(nextErrors);
+    return Object.keys(nextErrors).length === 0;
   };
 
   const handleSubmit = e => {
     e.preventDefault();
+    if (!validateForm()) return;
+
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
@@ -129,6 +151,9 @@ const AffiliationForm = () => {
                 <div className="affiliation__form-header">
                   <h3 className="affiliation__form-title">Solicitar Afiliación</h3>
                   <p className="affiliation__form-subtitle">Completa el formulario y te contactamos</p>
+                  {Object.keys(errors).length > 0 && (
+                    <p className="affiliation__error">Por favor completa todos los campos obligatorios antes de continuar.</p>
+                  )}
                 </div>
 
                 {/* Personal Info */}
@@ -227,7 +252,7 @@ const AffiliationForm = () => {
 
                 {/* Message */}
                 <div className="affiliation__field affiliation__field--full">
-                  <label htmlFor="message">Mensaje Adicional (Opcional)</label>
+                  <label htmlFor="message">Mensaje Adicional</label>
                   <textarea
                     id="message" name="message" rows={3}
                     placeholder="Cuéntanos sobre tu mascota o cualquier pregunta..."
