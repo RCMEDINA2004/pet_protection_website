@@ -13,10 +13,12 @@ const Navbar = () => {
   }, []);
 
   const links = [
-    { label: 'Quienes Somos', href: '#quienes-somos' },
+    { label: 'Inicio', href: '#hero' },
+    { label: 'Quienes Somos', href: '#que-es' },
     { label: 'Cómo Funciona', href: '#como-funciona' },
+    { label: 'Beneficios', href: '#beneficios' },
+    { label: 'Equipo', href: '#equipo' },
     { label: 'Planes', href: '#planes' },
-    { label: 'Equipo De Trabajo', href: '#equipo' },
   ];
 
   return (
